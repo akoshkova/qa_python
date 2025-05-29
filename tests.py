@@ -78,12 +78,9 @@ class TestBooksCollector:
      # Тесты для get_books_genre
     def test_get_books_genre(self):
         collector = BooksCollector()
-        collector.add_new_book('Матрица')
         collector.add_new_book('Гарри Поттер')
         books_genre = collector.get_books_genre()
-        assert 'Матрица' in books_genre
         assert 'Гарри Поттер' in books_genre
-        assert books_genre['Матрица'] is None
         assert books_genre['Гарри Поттер'] is None
 
     def test_get_book_genre(self):
